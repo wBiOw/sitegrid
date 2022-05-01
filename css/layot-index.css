@@ -1,0 +1,267 @@
+header {
+    background-color: #BEB7D8;
+}
+
+.header-container {
+    height: 90px;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 10px;
+    grid-template-columns: 1fr repeat(4, max-content);
+    grid-template-areas:
+        "logo tel skipe telegram btn";
+    justify-items: center;  /*from logo in class*/
+    align-items: center;
+    column-gap: 30px;
+}
+
+
+.logo {
+    grid-area: logo;
+    justify-self: left;
+}
+
+.logo img {
+    height: 34.5px;
+    width: 150px;
+}
+
+.contact {
+    font-size: 12px;
+}
+
+.tel {
+    grid-area: tel;
+}
+
+.skipe {
+    grid-area: skipe;
+}
+
+.telegram {
+    grid-area: telegram;
+}
+
+.tel a::before {
+    content: "";
+    background-image: url(/img/icons/phone\ icon.svg);
+    background-position: bottom;
+    background-size: 13px 13px;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
+.skipe a::before {
+    content: "";
+    background-image: url(/img/icons/Skype\ icon.svg);
+    background-position: bottom;
+    background-size: 13px 13px;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
+.telegram a::before {
+    content: "";
+    background-image: url(/img/icons/telegram\ icon.svg);
+    background-position: bottom;
+    background-size: 13px 13px;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
+.contact button {
+    grid-area: btn;
+    width: 180px;
+}
+
+.contact a {
+    text-decoration: none;
+    color: #383838;
+}
+
+.content-kurs {
+    margin: 0 auto;
+    max-width: 1170px;
+    grid-template-rows: 165px 30px 92px 154px;
+    grid-template-areas:
+        "h1 h1"
+        "p p"
+        ". .";
+    align-items: end;
+    justify-items: center;
+    column-gap: 26px;
+    background-image: url(/img/laptop\ 1.jpg);
+    background-repeat: no-repeat;
+    background-position: right 67%;
+    background-size: 313px 239px;
+}
+
+.content-kurs h1 {
+    font-size: 36px;
+    color: #006BA7;
+    line-height: 48px;
+    grid-area: h1;
+    margin: 0;
+}
+
+.content-kurs p {
+    font-size: 18px;
+    line-height: 24px;
+    grid-area: p;
+    margin: 0;
+}
+
+.content-kurs button {
+    width: 160px;
+
+}
+
+.content-kurs button:first-of-type {
+    justify-self: right;
+}
+
+.content-kurs button:last-child {
+    justify-self: left;
+}
+
+.content-aboutText {
+    background-color: #BEB7D8;
+    padding: 36px 0;
+    font-size: 14px;
+}
+
+.aboutText {
+    max-width: 1104px;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, 336px);
+    grid-auto-rows: 143px;
+    justify-content: center;
+    column-gap: 47px;
+}
+.inform-text p span:nth-of-type(odd) {
+    display: inline;
+}
+
+.inform-text p span:nth-of-type(even) {
+    display: none;
+}
+.aboutText p {
+    margin: 0;
+}
+
+footer {
+    background-color: #383838;
+    color: #fff;
+    text-align: center;
+    padding: 13px 0;
+    font-size: 12px;
+    margin: 0;
+}
+footer p {
+    margin: 0
+}
+
+@media (max-width: 992px) {
+    .header-container {
+        max-width: 533px;
+        height: 150px;
+        padding: 0 0 12px 0;
+        grid-template-columns: auto;
+        grid-template-areas:
+            "logo logo logo logo"
+            "tel skipe telegram btn";
+    }
+
+    .logo {
+        justify-self: auto;
+    }
+
+    .content-kurs {
+        grid-template-rows: 116px 34px 92px 73px;
+        background-position: 77vw 204%;
+        background-size: 350px 267px;
+    }
+
+    .content-kurs h1 {
+        line-height: 10px;
+    }
+
+    .content-kurs p {
+        line-height: 0px;
+    }
+
+    .content-aboutText {
+        padding: 15px 0 16px;
+    }
+    .aboutText {
+          grid-auto-rows: minmax(70px, max-content);
+          row-gap: 10px;    
+    }
+
+}
+
+ @media (max-width: 576px) {
+    .header-container {
+        height: 210px;
+        max-width: 320px;
+        grid-template-rows: 75px repeat(3, 17px) 80px ;
+        grid-template-areas:
+            "logo"
+            "tel"
+            "skipe"
+            "telegram"
+            "btn";
+        column-gap: 0px;
+    }
+
+.content-kurs {
+    max-width: 768px;
+    grid-template-rows: 118px 56px 74px 53px 49px;
+    grid-template-areas:
+        "h1"
+        "p"
+        "."
+        ".";
+    background-position: 56vw  188%;    
+    background-size: 350px 267px;
+    text-align: center;
+}
+
+.content-kurs button:first-of-type, .content-kurs button:last-child {
+   justify-self: center;
+}
+
+.content-kurs h1 {
+    max-width: 250px;
+    font-size: 25px;
+    line-height: normal;
+}
+
+.content-kurs p {
+    line-height: normal;
+    max-width: 200px;
+}
+
+.content-aboutText {
+    padding: 20px 0 30px;
+}
+
+.aboutText {
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, 290px);
+    grid-auto-rows: minmax(48px, max-content);
+    justify-content: center;
+    row-gap: 22px;
+}
+
+.inform-text p span:nth-of-type(odd) {
+    display: none;
+}
+
+.inform-text p span:nth-of-type(even) {
+    display: inline;
+}
+footer {
+    padding: 6.2px 0;
+}
+} 
