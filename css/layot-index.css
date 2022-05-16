@@ -7,17 +7,28 @@ header {
     max-width: 1170px;
     margin: 0 auto;
     padding: 0 10px;
+    -ms-grid-columns: 1fr 30px -webkit-max-content 30px -webkit-max-content 30px -webkit-max-content 30px -webkit-max-content;
+    -ms-grid-columns: 1fr 30px max-content 30px max-content 30px max-content 30px max-content;
+    grid-template-columns: 1fr repeat(4, -webkit-max-content);
     grid-template-columns: 1fr repeat(4, max-content);
     grid-template-areas:
         "logo tel skipe telegram btn";
-    justify-items: center;  /*from logo in class*/
+    justify-items: center;
+    /*from logo in class*/
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
     column-gap: 30px;
 }
 
 
 .logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
     grid-area: logo;
+    -ms-grid-column-align: left;
     justify-self: left;
 }
 
@@ -31,14 +42,20 @@ header {
 }
 
 .tel {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
     grid-area: tel;
 }
 
 .skipe {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
     grid-area: skipe;
 }
 
 .telegram {
+    -ms-grid-row: 1;
+    -ms-grid-column: 7;
     grid-area: telegram;
 }
 
@@ -70,6 +87,8 @@ header {
 }
 
 .contact button {
+    -ms-grid-row: 1;
+    -ms-grid-column: 9;
     grid-area: btn;
     width: 180px;
 }
@@ -82,13 +101,18 @@ header {
 .content-kurs {
     margin: 0 auto;
     max-width: 1170px;
+    -ms-grid-rows: 165px 30px 92px 154px;
     grid-template-rows: 165px 30px 92px 154px;
     grid-template-areas:
         "h1 h1"
         "p p"
         ". .";
+    -webkit-box-align: end;
+    -ms-flex-align: end;
     align-items: end;
     justify-items: center;
+    -webkit-column-gap: 26px;
+    -moz-column-gap: 26px;
     column-gap: 26px;
     background-image: url(/img/laptop\ 1.jpg);
     background-repeat: no-repeat;
@@ -97,6 +121,9 @@ header {
 }
 
 .content-kurs h1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
     font-size: 36px;
     color: #006BA7;
     line-height: 48px;
@@ -105,6 +132,9 @@ header {
 }
 
 .content-kurs p {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
     font-size: 18px;
     line-height: 24px;
     grid-area: p;
@@ -117,10 +147,12 @@ header {
 }
 
 .content-kurs button:first-of-type {
+    -ms-grid-column-align: right;
     justify-self: right;
 }
 
 .content-kurs button:last-child {
+    -ms-grid-column-align: left;
     justify-self: left;
 }
 
@@ -135,9 +167,14 @@ header {
     margin: 0 auto;
     grid-template-columns: repeat(auto-fit, 336px);
     grid-auto-rows: 143px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-column-gap: 47px;
+    -moz-column-gap: 47px;
     column-gap: 47px;
 }
+
 .inform-text p span:nth-of-type(odd) {
     display: inline;
 }
@@ -145,6 +182,7 @@ header {
 .inform-text p span:nth-of-type(even) {
     display: none;
 }
+
 .aboutText p {
     margin: 0;
 }
@@ -157,6 +195,7 @@ footer {
     font-size: 12px;
     margin: 0;
 }
+
 footer p {
     margin: 0
 }
@@ -166,6 +205,7 @@ footer p {
         max-width: 533px;
         height: 150px;
         padding: 0 0 12px 0;
+        -ms-grid-columns: auto;
         grid-template-columns: auto;
         grid-template-areas:
             "logo logo logo logo"
@@ -173,10 +213,12 @@ footer p {
     }
 
     .logo {
+        -ms-grid-column-align: auto;
         justify-self: auto;
     }
 
     .content-kurs {
+        -ms-grid-rows: 116px 34px 92px 73px;
         grid-template-rows: 116px 34px 92px 73px;
         background-position: 77vw 204%;
         background-size: 350px 267px;
@@ -193,75 +235,151 @@ footer p {
     .content-aboutText {
         padding: 15px 0 16px;
     }
+
     .aboutText {
-          grid-auto-rows: minmax(70px, max-content);
-          row-gap: 10px;    
+        grid-auto-rows: minmax(70px, -webkit-max-content);
+        grid-auto-rows: minmax(70px, max-content);
+        row-gap: 10px;
+    }
+
+    .logo {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 4;
+    }
+
+    .tel {
+        -ms-grid-row: 2;
+        -ms-grid-column: 1;
+    }
+
+    .skipe {
+        -ms-grid-row: 2;
+        -ms-grid-column: 2;
+    }
+
+    .telegram {
+        -ms-grid-row: 2;
+        -ms-grid-column: 3;
+    }
+
+    .contact button {
+        -ms-grid-row: 2;
+        -ms-grid-column: 4;
     }
 
 }
 
- @media (max-width: 576px) {
+@media (max-width: 576px) {
     .header-container {
         height: 210px;
         max-width: 320px;
-        grid-template-rows: 75px repeat(3, 17px) 80px ;
+        -ms-grid-rows: 75px 17px 17px 17px 80px;
+        grid-template-rows: 75px repeat(3, 17px) 80px;
         grid-template-areas:
             "logo"
             "tel"
             "skipe"
             "telegram"
             "btn";
+        -webkit-column-gap: 0px;
+        -moz-column-gap: 0px;
         column-gap: 0px;
     }
 
-.content-kurs {
-    max-width: 768px;
-    grid-template-rows: 118px 56px 74px 53px 49px;
-    grid-template-areas:
-        "h1"
-        "p"
-        "."
-        ".";
-    background-position: 56vw  188%;    
-    background-size: 350px 267px;
-    text-align: center;
-}
+    .content-kurs {
+        max-width: 768px;
+        -ms-grid-rows: 118px 56px 74px 53px 49px;
+        grid-template-rows: 118px 56px 74px 53px 49px;
+        grid-template-areas:
+            "h1"
+            "p"
+            "."
+            ".";
+        background-position: 56vw 188%;
+        background-size: 350px 267px;
+        text-align: center;
+    }
 
-.content-kurs button:first-of-type, .content-kurs button:last-child {
-   justify-self: center;
-}
+    .content-kurs button:first-of-type,
+    .content-kurs button:last-child {
+        -ms-grid-column-align: center;
+        justify-self: center;
+    }
 
-.content-kurs h1 {
-    max-width: 250px;
-    font-size: 25px;
-    line-height: normal;
-}
+    .content-kurs h1 {
+        max-width: 250px;
+        font-size: 25px;
+        line-height: normal;
+    }
 
-.content-kurs p {
-    line-height: normal;
-    max-width: 200px;
-}
+    .content-kurs p {
+        line-height: normal;
+        max-width: 200px;
+    }
 
-.content-aboutText {
-    padding: 20px 0 30px;
-}
+    .content-aboutText {
+        padding: 20px 0 30px;
+    }
 
-.aboutText {
-    margin: 0 auto;
-    grid-template-columns: repeat(auto-fit, 290px);
-    grid-auto-rows: minmax(48px, max-content);
-    justify-content: center;
-    row-gap: 22px;
-}
+    .aboutText {
+        margin: 0 auto;
+        grid-template-columns: repeat(auto-fit, 290px);
+        grid-auto-rows: minmax(48px, -webkit-max-content);
+        grid-auto-rows: minmax(48px, max-content);
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        row-gap: 22px;
+    }
 
-.inform-text p span:nth-of-type(odd) {
-    display: none;
-}
+    .inform-text p span:nth-of-type(odd) {
+        display: none;
+    }
 
-.inform-text p span:nth-of-type(even) {
-    display: inline;
+    .inform-text p span:nth-of-type(even) {
+        display: inline;
+    }
+
+    footer {
+        padding: 6.2px 0;
+    }
+
+    .logo {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 1;
+    }
+
+    .tel {
+        -ms-grid-row: 2;
+        -ms-grid-column: 1;
+    }
+
+    .skipe {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+    }
+
+    .telegram {
+        -ms-grid-row: 4;
+        -ms-grid-column: 1;
+    }
+
+    .contact button {
+        -ms-grid-row: 5;
+        -ms-grid-column: 1;
+    }
+
+    .content-kurs h1 {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 1;
+    }
+
+    .content-kurs p {
+        -ms-grid-row: 2;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 1;
+    }
 }
-footer {
-    padding: 6.2px 0;
-}
-} 
