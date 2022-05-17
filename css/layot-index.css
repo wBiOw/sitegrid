@@ -20,7 +20,7 @@ header {
     align-items: center;
     -webkit-column-gap: 30px;
     -moz-column-gap: 30px;
-    column-gap: 30px;
+    column-gap: 30px;   
 }
 
 
@@ -175,11 +175,11 @@ header {
     column-gap: 47px;
 }
 
-.inform-text p span:nth-of-type(odd) {
+.desktop {
     display: inline;
 }
 
-.inform-text p span:nth-of-type(even) {
+.mobile  {
     display: none;
 }
 
@@ -333,11 +333,11 @@ footer p {
         row-gap: 22px;
     }
 
-    .inform-text p span:nth-of-type(odd) {
+   .desktop {
         display: none;
     }
 
-    .inform-text p span:nth-of-type(even) {
+    .mobile  {
         display: inline;
     }
 
