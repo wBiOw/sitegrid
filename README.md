@@ -1,9 +1,5 @@
 ﻿# Learning Project (HTML & CSS) - CSS Grid Layout
 
-Layout - https://www.figma.com/file/9Cm34XVNEsCsgFL9jjVOTO/Практика-безкоштовного-курсу-(Copy)
-![Layout Desktop](Desktop.jpg)
-![Layout Tablet](Tablet.jpg) ![Layout Mobile](Mobile.jpg)
-
 Demo - https://wbiow.github.io/sitegrid/
 
 Tasks & Problems:
@@ -22,5 +18,7 @@ Tasks & Problems:
     + Add meta description; - OK
     + Add h2 elements to inform-text; - OK
     + Fix Grid Compatibility IE 11. - NO
-
-
+ 
+Layout - https://www.figma.com/file/9Cm34XVNEsCsgFL9jjVOTO/Практика-безкоштовного-курсу-(Copy)
+![Layout Desktop](Desktop.jpg)
+![Layout Tablet](Tablet.jpg) ![Layout Mobile](Mobile.jpg)
