@@ -61,7 +61,7 @@ header {
 
 .tel a::before {
     content: "";
-    background-image: url(/img/icons/phone\ icon.svg);
+    background-image: url(../img/icons/phone\ icon.svg);
     background-position: bottom;
     background-size: 13px 13px;
     background-repeat: no-repeat;
@@ -70,7 +70,7 @@ header {
 
 .skipe a::before {
     content: "";
-    background-image: url(/img/icons/Skype\ icon.svg);
+    background-image: url(../img/icons/Skype\ icon.svg);
     background-position: bottom;
     background-size: 13px 13px;
     background-repeat: no-repeat;
@@ -79,7 +79,7 @@ header {
 
 .telegram a::before {
     content: "";
-    background-image: url(/img/icons/telegram\ icon.svg);
+    background-image: url(../img/icons/telegram\ icon.svg);
     background-position: bottom;
     background-size: 13px 13px;
     background-repeat: no-repeat;
@@ -114,7 +114,7 @@ header {
     -webkit-column-gap: 26px;
     -moz-column-gap: 26px;
     column-gap: 26px;
-    background-image: url(/img/laptop\ 1.jpg);
+    background-image: url(../img/laptop\ 1.jpg);
     background-repeat: no-repeat;
     background-position: right 67%;
     background-size: 313px 239px;
